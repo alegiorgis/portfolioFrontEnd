@@ -1,0 +1,72 @@
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+                                    <img src="../../../assets/arg programa.jpg"
+                                        style="width: 185px;" alt="logo">
+                                    <h4 class="mt-1 mb-5 pb-1">Login PORTFOLIO</h4>
+                                </div>
+
+                                <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                                    <p>Por favor, ingrese email y contraseña.</p>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="email" formControlName="email" [ngClass]="{'is-invalid' : Email?.errors && Email?.touched,
+                                         'is-valid': !Email?.errors && Email?.touched}" id="form2Example11"
+                                            class="form-control" placeholder="Ingrese su email" />
+                                        <label class="form-label" for="form2Example11">Usuario</label>
+                                        <div *ngIf="Email?.errors && Email?.touched">
+                                            <p *ngIf="Email?.hasError('required')" class="text-danger">El email es
+                                                requerido.</p>
+                                            <p *ngIf="Email?.hasError('email')" class="text-danger">El formato del email
+                                                debe ser válido.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" formControlName="password" 
+                                        [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}" id="form2Example22"
+                                            class="form-control" placeholder="Password" />
+                                        <label class="form-label" for="form2Example22">Contraseña</label>
+                                        <div *ngIf="Password?.errors && Password?.touched">
+                                            <p *ngIf="Password?.hasError('required')" class="text-danger">La contraseña
+                                                es requerida.</p>
+                                           <!-- <p *ngIf="Password?.errors?.minlength" class="text-danger">La contraseña
+                                                debe ser de 5 o más caracteres.</p>-->
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        <button class="btn btn-primary btn-block gradient-custom-2 mb-3"
+                                            type="submit">Login</button>                                        
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <h4 class="mb-4">ALEJANDRO GIORGIS</h4>
+                                <p class="small mb-0">Bienvenidos a mi portfolio. Esta es una app creada en el marco del
+                                    curso Desarrollo Web Fullstack ARGENTINA PROGRAMA del Ministerio de Desarrollo,
+                                    segunda etapa #yoprogramo.
+                                    <br>
+                                    En esta app vuelco mis conocimientos adquiridos sobre HTML CSS, Javascript, Angular,
+                                    MySQL, Java, Springboot, y Postman. Con estas herramientras aprendimos a crear
+                                    aplicaciones estaticas, dinamicas (frontend); creacion de base de datos y backend, y
+                                    la conexion de ambas, y finalmente, ponerlos en funcionamiento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

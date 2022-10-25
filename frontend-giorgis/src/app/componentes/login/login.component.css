@@ -1,0 +1,23 @@
+.gradient-custom-2 {
+    background: rgb(13, 140, 166);
+    background: linear-gradient(90deg, rgba(13, 140, 166, 1) 0%, rgba(109, 58, 159, 1) 50%, rgba(6, 2, 70, 1) 100%);
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+
+
+}
+
+section{
+    font-family: 'Roboto', sans-serif;
+}
