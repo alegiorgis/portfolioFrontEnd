@@ -10,7 +10,7 @@ export class SkillsService {
   editSkills(value: any) {
   throw new Error('Method not implemented.');
 }
-URL=`https://portfoliobackmatsuda.herokuapp.com/`;
+URL=`https://portfoliobackgiorgis.herokuapp.com/`;
 
 constructor(private http: HttpClient) { }
 
